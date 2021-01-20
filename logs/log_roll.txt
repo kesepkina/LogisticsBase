@@ -1,0 +1,41 @@
+2021-01-21 01:07:04 [main] INFO  com.epam.logistics_base.reader.TruckFileReader - File "data/default.txt" doesn't exist. Default file was used.
+2021-01-21 01:07:04 [Thread-8] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #9 with priority 10 got in line
+2021-01-21 01:07:04 [Thread-1] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #2 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-6] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #7 with priority 10 got in line
+2021-01-21 01:07:04 [Thread-6] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #2 took truck #7
+2021-01-21 01:07:04 [Thread-1] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #3 took truck #2
+2021-01-21 01:07:04 [Thread-0] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #1 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-5] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #6 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-5] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #5 took truck #6
+2021-01-21 01:07:04 [Thread-0] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #4 took truck #1
+2021-01-21 01:07:04 [Thread-7] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #8 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-4] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #5 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-3] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #4 with priority 5 got in line
+2021-01-21 01:07:04 [Thread-8] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #1 took truck #9
+2021-01-21 01:07:04 [Thread-2] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #3 with priority 10 got in line
+2021-01-21 01:07:04 [Thread-9] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #10 with priority 5 got in line
+2021-01-21 01:07:05 [Thread-6] INFO  com.epam.logistics_base.entity.Truck - Truck #7 loaded goods.
+2021-01-21 01:07:05 [Thread-6] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #7 left terminal #2
+2021-01-21 01:07:05 [Thread-4] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #2 took truck #5
+2021-01-21 01:07:06 [Thread-8] INFO  com.epam.logistics_base.entity.Truck - Truck #9 loaded goods.
+2021-01-21 01:07:06 [Thread-8] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #9 left terminal #1
+2021-01-21 01:07:06 [Thread-3] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #1 took truck #4
+2021-01-21 01:07:07 [Thread-1] INFO  com.epam.logistics_base.entity.Truck - Truck #2 loaded goods.
+2021-01-21 01:07:07 [Thread-1] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #2 left terminal #3
+2021-01-21 01:07:07 [Thread-4] INFO  com.epam.logistics_base.entity.Truck - Truck #5 loaded goods.
+2021-01-21 01:07:07 [Thread-2] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #3 took truck #3
+2021-01-21 01:07:07 [Thread-4] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #5 left terminal #2
+2021-01-21 01:07:07 [Thread-9] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #2 took truck #10
+2021-01-21 01:07:07 [Thread-0] INFO  com.epam.logistics_base.entity.Truck - Truck #1 loaded goods.
+2021-01-21 01:07:07 [Thread-5] INFO  com.epam.logistics_base.entity.Truck - Truck #6 loaded goods.
+2021-01-21 01:07:07 [Thread-0] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #1 left terminal #4
+2021-01-21 01:07:07 [Thread-5] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #6 left terminal #5
+2021-01-21 01:07:07 [Thread-7] INFO  com.epam.logistics_base.entity.LogisticsBase - Terminal #4 took truck #8
+2021-01-21 01:07:07 [Thread-3] INFO  com.epam.logistics_base.entity.Truck - Truck #4 loaded goods.
+2021-01-21 01:07:07 [Thread-3] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #4 left terminal #1
+2021-01-21 01:07:09 [Thread-9] INFO  com.epam.logistics_base.entity.Truck - Truck #10 loaded goods.
+2021-01-21 01:07:09 [Thread-7] INFO  com.epam.logistics_base.entity.Truck - Truck #8 loaded goods.
+2021-01-21 01:07:09 [Thread-9] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #10 left terminal #2
+2021-01-21 01:07:09 [Thread-7] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #8 left terminal #4
+2021-01-21 01:07:10 [Thread-2] INFO  com.epam.logistics_base.entity.Truck - Truck #3 loaded goods.
+2021-01-21 01:07:10 [Thread-2] INFO  com.epam.logistics_base.entity.LogisticsBase - Truck #3 left terminal #3
