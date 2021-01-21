@@ -14,7 +14,7 @@ public class Truck extends Thread {
     private static final Logger log = LogManager.getLogger();
 
     private final int truckId;
-    private TypeOfGoods typeOfGoods = null;
+    private TypeOfGoods typeOfGoods;
     private boolean isEmpty = true;
 
     public Truck(int truckId) {
@@ -39,6 +39,7 @@ public class Truck extends Thread {
         if (typeOfGoods.equals(TypeOfGoods.PERISHABLE)) {
             this.setPriority(Thread.MAX_PRIORITY);
         }
+        isEmpty = false;
     }
 
     @Override
@@ -63,16 +64,16 @@ public class Truck extends Thread {
 
     public void loadGoods() throws InterruptedException {
         TimeUnit.SECONDS.sleep(new Random().nextInt(3) + 1);
-        this.typeOfGoods = TypeOfGoods.OTHER;
+        this.typeOfGoods = TypeOfGoods.USUAL;
         isEmpty = false;
-        log.info("Truck #{} loaded goods.", truckId);
+        log.info("Truck #{} loaded goods", truckId);
     }
 
     public void unloadGoods() throws InterruptedException {
         TimeUnit.SECONDS.sleep(new Random().nextInt(3) + 1);
         typeOfGoods = null;
         isEmpty = true;
-        log.info("Truck #{} unloaded goods.", truckId);
+        log.info("Truck #{} unloaded goods", truckId);
     }
 
     public TypeOfGoods getTypeOfGoods() {
