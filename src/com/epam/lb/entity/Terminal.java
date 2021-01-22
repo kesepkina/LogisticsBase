@@ -1,4 +1,4 @@
-package com.epam.logistics_base.entity;
+package com.epam.lb.entity;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

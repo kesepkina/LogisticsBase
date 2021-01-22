@@ -1,4 +1,4 @@
-package com.epam.logistics_base.exception;
+package com.epam.lb.exception;
 
 public class LogisticsBaseException extends Exception{
     public LogisticsBaseException() {

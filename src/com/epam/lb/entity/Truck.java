@@ -1,6 +1,6 @@
-package com.epam.logistics_base.entity;
+package com.epam.lb.entity;
 
-import com.epam.logistics_base.exception.LogisticsBaseException;
+import com.epam.lb.exception.LogisticsBaseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -64,7 +64,7 @@ public class Truck extends Thread {
 
     public void loadGoods() throws InterruptedException {
         TimeUnit.SECONDS.sleep(new Random().nextInt(3) + 1);
-        this.typeOfGoods = TypeOfGoods.USUAL;
+        this.typeOfGoods = TypeOfGoods.NORMAL;
         isEmpty = false;
         log.info("Truck #{} loaded goods", truckId);
     }

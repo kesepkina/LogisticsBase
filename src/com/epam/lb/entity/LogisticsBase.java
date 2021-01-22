@@ -1,6 +1,6 @@
-package com.epam.logistics_base.entity;
+package com.epam.lb.entity;
 
-import com.epam.logistics_base.exception.LogisticsBaseException;
+import com.epam.lb.exception.LogisticsBaseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,7 +19,7 @@ public class LogisticsBase {
     private static final int NUMBER_OF_TERMINALS = 5;
     private final Semaphore semaphore = new Semaphore(NUMBER_OF_TERMINALS, true);
     private static final List<Terminal> terminals = new ArrayList<>();
-    private static final ReentrantLock lock = new ReentrantLock();
+    private static final ReentrantLock locker = new ReentrantLock();
 
     private LogisticsBase() {
         for (int i = 1; i <= NUMBER_OF_TERMINALS; i++) {
@@ -30,13 +30,13 @@ public class LogisticsBase {
     public static LogisticsBase getInstance() {
         if (!initialized) {
             try {
-                lock.lock();
+                locker.lock();
                 if (instance == null) {
                     instance = new LogisticsBase();
                 }
                 initialized = true;
             } finally {
-                lock.unlock();
+                locker.unlock();
             }
         }
         return instance;
@@ -48,7 +48,7 @@ public class LogisticsBase {
             log.info("Truck #{} with priority {} got in line", truck.getTruckId(), truck.getPriority());
             semaphore.acquire();
             try {
-                lock.lock();
+                locker.lock();
                 int i = 0;
                 while (i < NUMBER_OF_TERMINALS) {
                     Terminal terminal = terminals.get(i);
@@ -61,7 +61,7 @@ public class LogisticsBase {
                     i++;
                 }
             } finally {
-                lock.unlock();
+                locker.unlock();
             }
         } catch (InterruptedException e) {
             throw new LogisticsBaseException("Current thread " + Thread.currentThread().getName() + " was interrupted", e);

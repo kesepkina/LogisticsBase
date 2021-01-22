@@ -1,4 +1,4 @@
-package com.epam.logistics_base.reader;
+package com.epam.lb.reader;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

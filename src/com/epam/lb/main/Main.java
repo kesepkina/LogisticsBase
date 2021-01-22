@@ -1,8 +1,8 @@
-package com.epam.logistics_base.main;
+package com.epam.lb.main;
 
-import com.epam.logistics_base.entity.Truck;
-import com.epam.logistics_base.parser.TruckParser;
-import com.epam.logistics_base.reader.TruckFileReader;
+import com.epam.lb.entity.Truck;
+import com.epam.lb.parser.TruckParser;
+import com.epam.lb.reader.TruckFileReader;
 
 import java.util.List;
 

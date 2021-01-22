@@ -1,7 +1,7 @@
-package com.epam.logistics_base.parser;
+package com.epam.lb.parser;
 
-import com.epam.logistics_base.entity.Truck;
-import com.epam.logistics_base.entity.TypeOfGoods;
+import com.epam.lb.entity.Truck;
+import com.epam.lb.entity.TypeOfGoods;
 
 import java.util.ArrayList;
 import java.util.List;
