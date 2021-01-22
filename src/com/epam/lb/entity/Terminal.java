@@ -7,8 +7,6 @@ import java.util.StringJoiner;
 
 public class Terminal {
 
-    private static final Logger log = LogManager.getLogger();
-
     private final int terminalId;
     private volatile boolean isBusy = false;
 

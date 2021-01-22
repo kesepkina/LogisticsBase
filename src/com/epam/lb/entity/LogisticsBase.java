@@ -64,6 +64,7 @@ public class LogisticsBase {
                 locker.unlock();
             }
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new LogisticsBaseException("Current thread " + Thread.currentThread().getName() + " was interrupted", e);
         }
         return assignedTerminal;

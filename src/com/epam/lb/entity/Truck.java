@@ -56,8 +56,11 @@ public class Truck extends Thread {
                     unloadGoods();
                 }
             }
-        } catch (LogisticsBaseException | InterruptedException e) {
-            log.error("Error in thread {}", Thread.currentThread().getName(), e);
+        } catch (LogisticsBaseException e) {
+            log.error("Error in thread {}:", this.getName(), e);
+        } catch (InterruptedException e) {
+            this.interrupt();
+            log.error("Error in thread {}:", this.getName(), e);
         }
         terminal.ifPresent(value -> LogisticsBase.getInstance().releaseTerminal(this, value));
     }
@@ -85,20 +88,27 @@ public class Truck extends Thread {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Truck that = (Truck) o;
+        Truck truck = (Truck) o;
 
-        return typeOfGoods == that.typeOfGoods;
+        if (truckId != truck.truckId) return false;
+        if (isEmpty != truck.isEmpty) return false;
+        return typeOfGoods == truck.typeOfGoods;
     }
 
     @Override
     public int hashCode() {
-        return typeOfGoods != null ? typeOfGoods.hashCode() : 0;
+        int result = truckId;
+        result = 31 * result + (typeOfGoods != null ? typeOfGoods.hashCode() : 0);
+        result = 31 * result + (isEmpty ? 1 : 0);
+        return result;
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", Truck.class.getSimpleName() + "[", "]")
+                .add("truckId=" + truckId)
                 .add("typeOfGoods=" + typeOfGoods)
+                .add("isEmpty=" + isEmpty)
                 .toString();
     }
 }
